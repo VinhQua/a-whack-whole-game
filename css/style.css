@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(255, 194, 172);
+    flex-flow: column nowrap;
+    
+}
+h1{
+    font-size: 5rem;
+    font-family: cursive;
+}
+.content{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 4rem;
+}
+.boom{
+    position: absolute;
+    width: 10rem;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1000;
+}
+.hammer{
+    background: url('../hammer.png');
+    position: absolute;
+    width: 7rem;
+    top: 0;
+    left: 0;
+    display: none;
+    transform: rotate(-90deg) ;
+    z-index: 10;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+
+}
+.hole{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 12rem;
+    width: 11rem;
+    overflow: hidden;
+
+}
+.hole:after{
+    height: 3.5rem;
+    width: 100%;
+    display: block;
+    background: url(../soil.png) top no-repeat;
+    background-size: cover;
+    z-index: 2;
+    content: '';
+    bottom: 0;
+    position: absolute;
+    
+}
+.mole {
+    background: url('../mole.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    bottom: -100%;
+    transition: all .2s ease ;
+    bottom: -100%;
+}
+
+.mole.up{
+    bottom: 15%;
+}
+button{
+    margin-top:3rem ;
+    padding: .5rem 1rem;
+    font-size: 3rem;
+    border-radius: 1rem;
+    background-color: aqua;
+
+}
+button:hover{
+    background-color: rgb(151, 248, 248);
+}
+button:hover .hammer{
+    display: none;
+}

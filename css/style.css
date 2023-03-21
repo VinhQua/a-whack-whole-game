@@ -122,4 +122,7 @@ button:hover .hammer{
     .mole.up{
         bottom: 15%;
     }
+    button{
+        font-size: 1.5rem;
+    }   
 }
